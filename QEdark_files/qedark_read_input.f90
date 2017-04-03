@@ -97,7 +97,7 @@ SUBROUTINE qedark_read_input(&
   er_binsize = 1.0_DP
   
   num_q_bins = 1
-  deltaq=0.1
+  deltaq=0.1_DP
   
   scissor_correction = .false.
   scissorgap = 0.0_DP
