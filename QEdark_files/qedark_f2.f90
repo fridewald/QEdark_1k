@@ -304,7 +304,7 @@ SUBROUTINE qedark_f2( restartmode, &
 
   ! Stuff for binning integrated form factors. 
   ! Needs to go after ermax_RAU is calculated
-  IF (num_er_bins > 0) THEN
+  IF (numqbins > 0) THEN
      ALLOCATE (binedgesq(numqbins+1), STAT=ierr )
      IF( ierr /= 0 ) &
           CALL errore( 'qedark_f2 ',' error allocating binedgesq ', ABS(ierr) )
