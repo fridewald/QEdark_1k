@@ -295,7 +295,16 @@ SUBROUTINE qedark_multimass(restartmode, &
      WRITE (*,*), " "
      WRITE (*,*) "Creating bins for C integral ..."
      WRITE (*,*), "bintype=", er_bin_type
-     WRITE (*,*), "Energy bin size=", Ry2eV*er_binsize, "eV"
+     SELECT CASE(er_bin_type)
+     CASE (1)
+        WRITE (*,*), "Energy bin size=", ermax_NU/num_er_bins, "eV"
+     CASE (2)
+        WRITE (*,*), "Energy bin size=", Ry2eV*er_binsize, "eV"
+     CASE (3)
+        WRITE (*,*), "Exponetial bins"
+     CASE default
+        WRITE (*,*), "Energy bin size=", ermax_NU/num_er_bins, "eV"
+     END SELECT
      
      
 
