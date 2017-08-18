@@ -91,17 +91,16 @@ Please enter your choice:
 
 Choose 1 and hit ENTER. This will create 4 folders `ge_###` , in each a partial sum of the squared formfaktor will be calculated.
 
-Then choose 2. This will send 4 jobs to Tesla. The jobs put ther output in `ge_###`.  
-Now you can hit 7 and take a coffee brack until all jobs are finished. To check if they are finished run
+Then choose 2. This will send 4 jobs to Tesla. The jobs put ther output in `ge_###`. Now you can hit 7 and take a coffee brack until all jobs are finished. To check if they are finished run
 
     qstat
 
-If you get no output they are finished. If everything went right there should be a file K.###.dat in every ge_### folder.  
-If something went wrong look in a folder ge_### for the job_f2.pbs.e######## file.
+If you get no output they are finished. If everything went right there should be a file `K.###.dat` in every `ge_###` folder.  
+If something went wrong look in a folder `ge_###` for the `job_f2.pbs.e########` file.
 
 When changing anything in `dm.in`, `ge.#.in` or `qedark_1k.sys` rerun option 1 with `qedark_1k.sh`.
 
-So finally everything went well, and there are 4 `K.###.dat` files.  
+So finally everything went well, and there are 4 `K.###.dat` files.
 The content of these files need to be summed up.
 Therefor run `qedark_1k.sh` and choose 3.
 This creates the file `C.dat` which contains the squared formfactor.
@@ -130,9 +129,10 @@ A snippet of a `C.###.dat` file (less rows then the real one):
 
 The first column stands for the DM-formfaktor ( 1, 1/q, 1/q^2).
 The second column represents the month and so annual modulation of the velocity of the earth
-1. December ve_mod=-15kmps
-2. March ve_mod=0
-3. June ve_mod=15kmps
+1. December ve_mod = -15kmps
+2. March ve_mod = 0
+3. June ve_mod = 15kmps
+
 The third column is the total rate divided by a prefactor the following bins represent the binned rate.
 If you have not changed anything else then said above the files should have 503 columns.
 
