@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=1,walltime=600
+#PBS -j oe
+
+#ulimit -s unlimited
+
+EXEC="/kalinka/home/lukwata/software/My_espresso-5.1.2/PW/src/pw_dark_1k.x"
+
+
+LOGFILE="log.txt"
+>$LOGFILE
+
+n=1
+
+#echo "Run with $n threads" >> $LOGFILE
+
+#input=ge.semicore
+#k_max=8
+input=ge.243
+#input=ge.semicore
+# $EXEC < ge.semicore.in > ge.semicore.out
+$EXEC < ${input}.in > ${input}.out
+#sed -e "/ATOMIC_SPECIES/i \&kvalue k_value=$k\/" -e "s/germ/germ$k/" -e "/outdir/s/.\//.\/$outdir/" $input.in | $EXEC > ${input}_$k.out
+
+rm *.wfc

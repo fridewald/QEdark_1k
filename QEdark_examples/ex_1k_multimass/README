@@ -1,0 +1,12 @@
+################################
+# Julian Lukwata
+# 10.08.2017
+################################
+
+job.pbs computes the scattering rate for different masses.
+C.dat is the crytal formfaktor.
+C.dat is used as input for the program started by job.pbs.
+
+1   add the desired masses (values in eV) to dm.in
+2   run job.pbs in Telsa or other HPC
+3   result is in files number by mass index

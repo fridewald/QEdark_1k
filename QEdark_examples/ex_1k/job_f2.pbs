@@ -1,0 +1,25 @@
+#!/bin/bash
+# script to start pw_dar_1k
+
+LOGFILE="log.txt"
+>$LOGFILE
+
+# path to pw_dark_1k executable file
+if [ -z ${EXEC_F2_1K} ]; then
+    EXEC_F2_1K="/kalinka/home/lukwata/sofware/My_espresso-5.1.2/PW/src/pw_dark_1k.x"
+fi
+
+# input file
+if [ -z $GE_IN ]; then
+    GE_IN="ge.243.in"
+fi
+
+# output file
+output="f2_1k.out"
+
+$EXEC_F2_1K < $GE_IN > $output
+#echo $output
+
+# remove bigv.wfc file
+# it contains the plainwave
+rm *.wfc

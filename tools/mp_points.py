@@ -47,10 +47,10 @@ for r1 in range(q1):
             kvectors[ik,0] = (2.0*(r1+1) - q1 - 1)/(2.0*q1)
             kvectors[ik,1] = (2.0*(r2+1) - q2 - 1)/(2.0*q2)
             kvectors[ik,2] = (2.0*(r3+1) - q3 - 1)/(2.0*q3)
-            
+
 #            print ik+1, kvectors[ik,0]*b1 + kvectors[ik,1]*b2 + kvectors[ik,2]*b3
             print ik+1, kvectors[ik,:]
 
             ik = ik + 1
-            
+
 

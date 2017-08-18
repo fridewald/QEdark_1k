@@ -1,4 +1,4 @@
-# Adrian Soto 
+# Adrian Soto
 # April 13, 2015
 # Stony Brook University
 #
@@ -11,9 +11,10 @@
 
 
 # number of k-points in each BZ direction
-n1=4
-n2=4
-n3=4
+n_standard = 3
+n1=n_standard
+n2=n_standard
+n3=n_standard
 
 k1min=-0.5*2
 k1max= 0.5*2
@@ -40,10 +41,10 @@ print "          ", n1*n2*n3
 for i1 in range(0,n1):
     for i2 in range(0,n2):
         for i3 in range(0,n3):
-            
-            k1=k1min + (i1 + s1)*dk1/n1 
+
+            k1=k1min + (i1 + s1)*dk1/n1
             k2=k2min + (i2 + s2)*dk2/n2
             k3=k3min + (i3 + s3)*dk3/n3
-            
+
             print " %.6f \t %.6f \t %.6f    \t    %.8f" % (k1, k2, k3, w)
-            
+

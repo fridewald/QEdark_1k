@@ -1,0 +1,17 @@
+&dm_parameters
+    calculation_mode= 'f2_1k'
+    nbndval=14
+    scissor_correction = .true.
+    scissorgap = 0.67D0
+    restart = .false.
+    vearth_SI = 2.40E+05
+    vesc_SI = 5.37E+05
+    v0_SI = 2.30E+05
+    er_bin_type = 1
+    num_er_bins = 500
+    ermax_NU = 50.0
+    num_q_bins = 900
+    deltaq = 0.02
+    nksf = 243
+    num_mx = 0
+/

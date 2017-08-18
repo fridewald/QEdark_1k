@@ -1,0 +1,36 @@
+&control
+    calculation= 'scf'
+    restart_mode= 'from_scratch'
+    prefix='germ'
+    tstress= .false.
+    tprnfor= .false.
+    pseudo_dir= '../../../../'
+    outdir= './'
+ /
+ &system
+    ibrav= 2
+    celldm(1)= 10.8171069
+    nat= 2
+    ntyp= 1
+    ecutwfc= 70.0
+    nbnd= 66
+    nosym= .true.
+ /
+ &electrons
+    diagonalization= 'david'
+    mixing_mode= 'plain'
+    mixing_beta= 0.7
+    conv_thr= 1.0d-8
+    diago_full_acc= .true.
+ /
+ATOMIC_SPECIES
+ Ge  72.630 Ge.pbe-dn-rrkjus_psl.0.2.2.UPF
+ATOMIC_POSITIONS
+ Ge 0.00 0.00 0.00
+ Ge 0.25 0.25 0.25
+K_POINTS crystal
+          4 
+      0.0000000  0.0000000  0.0000000   1.00
+     -0.3333333 -0.3333333  0.3333333   8.00
+      0.0000000  0.0000000  0.6666667   6.00
+     -0.3333333 -0.3333333  1.0000000  12.00

@@ -1,4 +1,5 @@
 #!/usr/local/bin/python
+""" docstring """
 import math
 import numpy as np
 import matplotlib.pyplot as plt
@@ -43,8 +44,8 @@ q_max= qmax( max(ecutwfc) )
 
 
 
-dE=[1.0, 10.0, 100.0]  
-mxmin=0.10E06 
+dE=[1.0, 10.0, 100.0]
+mxmin=0.10E06
 mxmax=1.0E09
 q=np.arange(0.001*q_max , q_max, 0.001*q_max)
 
@@ -54,7 +55,7 @@ vmax = vearth+vesc
 
 
 linecolors=['blue', 'red', 'green', 'cyan', 'magenta', 'yellow']
-mylabel=['', '', ''] 
+mylabel=['', '', '']
 
 fig = plt.figure()
 
@@ -62,12 +63,12 @@ i=0
 mx=mxmin
 while (mx <= mxmax):
     mx = mxmin * 10**i
-    
-    mylabel[0] = 'mx=' + str(format_e(mx/1.0E+06)) + 'MeV' + ' , dE=', str(dE[0]) + 'eV' 
-    mylabel[1] = 'mx=' + str(format_e(mx/1.0E+06)) + 'MeV' + ' , dE=', str(dE[1]) + 'eV' 
-    mylabel[2] = 'mx=' + str(format_e(mx/1.0E+06)) + 'MeV' + ' , dE=', str(dE[2]) + 'eV' 
-    
-    
+
+    mylabel[0] = 'mx=' + str(format_e(mx/1.0E+06)) + 'MeV' + ' , dE=', str(dE[0]) + 'eV'
+    mylabel[1] = 'mx=' + str(format_e(mx/1.0E+06)) + 'MeV' + ' , dE=', str(dE[1]) + 'eV'
+    mylabel[2] = 'mx=' + str(format_e(mx/1.0E+06)) + 'MeV' + ' , dE=', str(dE[2]) + 'eV'
+
+
     plt.plot(q, vmin(dE[0], mx, q), color=linecolors[i], linestyle='-', label=mylabel[0])
     plt.plot(q, vmin(dE[1], mx, q), color=linecolors[i], linestyle='-.', label=mylabel[1])
     plt.plot(q, vmin(dE[2], mx, q), color=linecolors[i], linestyle=':', label=mylabel[2])
@@ -79,8 +80,8 @@ x_min=0.0
 x_max=1.1*q_max
 y_min=0.0
 y_max=17.0*vmax
-plt.xlim([x_min, x_max]) 
-plt.ylim([y_min, y_max]) 
+plt.xlim([x_min, x_max])
+plt.ylim([y_min, y_max])
 
 
 # Plot labels, legend and title
@@ -116,12 +117,12 @@ for i in range (0, len(ecutwfc)):
     xtext = 1.02*currentq_max
     ytext = 0.4*y_max
     ax.annotate(note, xy=(xtext, ytext), xytext=(xtext, ytext), size=10, rotation=90.0 ) #, arrowprops=dict(facecolor='black', shrink=0.02))
-    
+
     xshade=np.arange(currentq_max, x_max, 0.001*x_max)
     plt.fill_between(xshade, 0.0, x_max-q_max, facecolor='red', alpha=opacity)
 
 
-    
+
 
 
 ###yshade=np.arange(vmax, y_max, 0.001*y_max)

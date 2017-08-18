@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=1,walltime=600
+#PBS -j oe
+
+#ulimit -s unlimited
+
+EXEC="/kalinka/home/lukwata/software/My_espresso-5.1.2/bin/multimass_with_f2input.x"
+
+
+LOGFILE="log.txt"
+>$LOGFILE
+
+#echo "Run with $n threads" >> $LOGFILE
+
+input=multi.243
+$EXEC > ${input}.out

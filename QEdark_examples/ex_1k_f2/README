@@ -1,0 +1,15 @@
+########################
+# Julian Lukwata
+# 10.08.2017
+########################
+
+To calculation the crystal formfactor different steps have to be done
+
+1.  check in all scripts and dm.in and ge.X.in if the same number of k-points is set
+2.  run creation.sh
+    It will create a lot of folders, with dm.in, job.pbs and ge.X.in in them.
+    The script adds the corresponding k_value in dm.in for every folder
+3.  Run multijob.sh
+    It will send the jobs to Tesla
+4.  If all jobs are finish run sum.sh
+    Which creates the C.dat containing the formfactor

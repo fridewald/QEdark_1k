@@ -1,0 +1,14 @@
+kpoints=243
+GE_IN="ge.243.in"
+dm_in="dm.in"
+# use absolute path
+pseudo_dir="/kalinka/home/lukwata/testQEdark/"
+
+job_f2=job_f2.pbs
+job_multi=job_multi.pbs
+
+export EXEC_SUM="/kalinka/home/lukwata/software/test_compile/espresso-5.1.2/bin/qedark_1k_sum.x"
+export EXEC_F2_1K="/kalinka/home/lukwata/software/test_compile/espresso-5.1.2/PW/src/pw_dark_1k.x"
+export EXEC_MULTI="/kalinka/home/lukwata/software/test_compile/espresso-5.1.2/bin/multimass_with_f2input.x"
+export GE_IN
+export KPOINTS="$kpoints"
