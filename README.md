@@ -64,6 +64,38 @@
 <!---
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --->
+##         QEdark QUICK EXECUTION GUIDELINES
+
+ 1) The file dm.in must exist in the directory where the code
+    is being run since it contains the input data to QEdark.
+
+ 2) QEdark is executed within Quantum ESPRESSO's pw.x program
+    which is copied to the bin/ directory. Execute as
+       QEdark_dir/bin/pw.x < QEinputfile > QEoutputfile
+
+ 3) In order to run the multithreaded version, the value of
+    OMP_STACKSIZE will most likely need to be increased. For
+    Si and Ge we have found that setting it to 512M has been
+    enough.
+
+    In bash this can be done by entering the commmand
+       export OMP_STACKSIZE=512M
+
+  4) Users are encouraged to get familiar with the code by
+     going through the examples in the folder QEdark_examples/,
+     which have been chosen to introduce the user into several
+     features of QEdark.
+
+  5) Previous knowledge of Quantum ESPRESSO
+     is highly recommended. There are plenty of tutorials and
+     examples at the link
+     	 http://www.quantum-espresso.org/tutorials/
+
+## QEdark_1k execution
+
+Look inside the folder [QEdark_examples/ex_1k/](QEdark_examples/ex_1k).
+There you find a help script to run the code on a Sun Grid Engine.
+
 
 ## QEdark quick installation guide
 
@@ -104,7 +136,7 @@
     
         ./configure --disable-parallel --enable-openmp
 
-    NOTE:QEdark v1.0 does not support OpenMPI parallelization
+    > QEdark v1.0 does not support OpenMPI parallelization
 
 1. Compile by typing the following command in QE main directory
 
@@ -241,38 +273,9 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --->
 
-##         QEdark QUICK EXECUTION GUIDELINES
-
- 1) The file dm.in must exist in the directory where the code
-    is being run since it contains the input data to QEdark.
-
- 2) QEdark is executed within Quantum ESPRESSO's pw.x program
-    which is copied to the bin/ directory. Execute as
-       QEdark_dir/bin/pw.x < QEinputfile > QEoutputfile
-
- 3) In order to run the multithreaded version, the value of
-    OMP_STACKSIZE will most likely need to be increased. For
-    Si and Ge we have found that setting it to 512M has been
-    enough.
-
-    In bash this can be done by entering the commmand
-       export OMP_STACKSIZE=512M
-
-  4) Users are encouraged to get familiar with the code by
-     going through the examples in the folder QEdark_examples/,
-     which have been chosen to introduce the user into several
-     features of QEdark.
-
-  5) Previous knowledge of Quantum ESPRESSO
-     is highly recommended. There are plenty of tutorials and
-     examples at the link
-     	 http://www.quantum-espresso.org/tutorials/
 
 <!---
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --->
-## QEdark_1k execution
-
-Look inside the folder [QEdark_examples/ex_1k/](QEdark_examples/ex_1k).
 
   
