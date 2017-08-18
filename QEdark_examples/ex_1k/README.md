@@ -1,5 +1,5 @@
 
-This documentation aims to help with the reproduction or modification of the results of my thesis. The goal is to calculate the scattering rate of DM-electron scattering. <span style="background-color: transparent;">T</span><span style="background-color: transparent;">he main software used is <a href="http://www.quantum-espresso.org/" title="qe">QuantumESPRESSO</a> and <a href="https://github.com/adrian-soto/QEdark_repo" title="qedark">QEdark</a>:</span>
+This documentation aims to help with the reproduction or modification of the results of my thesis. The goal is to calculate the scattering rate of DM-electron scattering. The main software used is <a href="http://www.quantum-espresso.org/" title="qe">QuantumESPRESSO</a> and <a href="https://github.com/adrian-soto/QEdark_repo" title="qedark">QEdark</a>:
 
 ## HowTo QEdark_1k
 
@@ -20,11 +20,10 @@ Copy it to your home folder
 
 and change in it.
 
-## There you find the file dm.in in which you can change the masses of the DM particales and the escape velocity.
+There you find the file dm.in in which you can change the masses of the DM particales and the escape velocity.
 
 There are also the two files `ge.243.in` and `ge.4.in`. In `ge.243.in` a 243 k-point mesh is defined, in `ge.4.in` a 4 k-point mesh is defined (it is really a reduced 27 k-point mesh, but that does not matter here).
-A file with a description of the most important variables can be found here.
-   * [[%ATTACHURL%/input-description.pdf][input-description.pdf]]: Description of variables in `dm.in` and `ge.##.in`
+A file with a description of the most important variables can be found [here](./input-description.pdf).   
 Let's use the 4 k-point mesh to generate the crystal formfaktor. The steps for `ge.243.in` are the same, but the execution time would be much longer.
 For the sake of convenience I created a bash-skript `qedark_1k.sh`.
 It lets you control all the following steps.
